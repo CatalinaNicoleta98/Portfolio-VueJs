@@ -39,7 +39,7 @@
                 <p class="mb-2 text-lg font-semibold text-left">Development</p>
                 <p class="text-xl text-left font-medium mb-10 text-rose-300">HTML-CSS-BOOTSTRAP-JavaScript</p>
                 <h1>For my first semester exam, I got to work on my biggest project until now. It was a team project, which means that each one of us had it's own area of expertise. I, fortunately, got to do a little bit of everything by helping with the design of the logo, printables and report and  working together with my colleague on the UX research. But the main area I worked in was definitely the coding of the website. Below, you can see a snippet of the final product, but I also invite you to visit the page and experience it.</h1>
-                <iframe id="videoViewer" class="w-[100%] lg:h-[80vh] md:h-[50hv] h-[30vh]" src="/public/img/remotelyweb.mp4" loop></iframe>
+                <iframe id="videoViewer" class="w-[100%] lg:h-[80vh] md:h-[50hv] h-[30vh]" src="../img/remotelyweb.mp4" loop></iframe>
                 <button><a href="https://danielpincu.com/index.html" class="hover:text-rose-300 text-orange-200 my-5">Visit Page</a></button>
               </div>
             </div>
