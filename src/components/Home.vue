@@ -57,8 +57,7 @@
     width: 100vw;
     height: 100vh;
     background-image: url('../img/lo-fi.png');
-    background-size: cover;
-    background-position: center;
+    
   
   };
 
