@@ -2,7 +2,7 @@
   <div id="home" class="header">
 
 <!-- NAVIGATION, MAKE STICKY -->
- <nav class="flex flex-row items-center justify-center mx-auto w-[100%]  bg-slate-500 bg-opacity-50 z-10 fixed">
+ <nav class="flex flex-row items-center justify-center mx-0 md:mx-auto lg:mx-auto w-[100vw]  bg-slate-500 bg-opacity-50 z-10 fixed">
      
          <ul class="flex flex-row text-md mt-7 mb-5">
              <li class="ml-7 mr-6"><a class="text-orange-300 hover:text-rose-300" href="#home">01//home</a></li>
@@ -18,7 +18,7 @@
 
      <!-- THIS IS NAME SVG -->
 
-     <div class=" name flex justify-center items-center  mt-72 lg:mt-56 md:mt-60">
+     <div class=" name flex justify-center items-center mt-72 lg:mt-56 md:mt-60">
 
          <!-- <h1 class=" text-gray-900 text-5xl lg:text-8xl md:text-7xl font-extrabold"><span class="mr-1 font-outline-2">Catalina</span> <span class="ml-1">Vrinceanu</span></h1>
          <h2 class=" text-xl lg:text-4xl md:text-2xl font-medium mt-4">Front-End Developer | Multimedia Designer</h2> -->
@@ -26,7 +26,7 @@
 
 
 
-         <svg class="w-30" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307.38 78.69"><defs></defs><text class="cls-2" transform="translate(44.97 20.9)"><tspan x="0" y="0">Catalina</tspan><tspan class="cls-3" x="95.01" y="0"> </tspan><tspan x="100.82" y="0">Vrinceanu</tspan></text><text class="cls-1" transform="translate(31.61 38.31)"><tspan x="0" y="0">Front-End Developer || Multimedia Designer</tspan></text></svg>
+         <svg class="w-50" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307.38 78.69"><defs></defs><text class="cls-2" transform="translate(44.97 20.9)"><tspan x="0" y="0">Catalina</tspan><tspan class="cls-3" x="95.01" y="0"> </tspan><tspan x="100.82" y="0">Vrinceanu</tspan></text><text class="cls-1" transform="translate(31.61 38.31)"><tspan x="0" y="0">Front-End Developer || Multimedia Designer</tspan></text></svg>
          
          
      </div>
@@ -57,6 +57,8 @@
     width: 100vw;
     height: 100vh;
     background-image: url('../img/lo-fi.png');
+    background-size: cover;
+    background-position: center;
     
   
   };

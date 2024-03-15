@@ -7,7 +7,7 @@
 
 <h1 class="text-7xl mb-32 mx-auto flex justify-center items-center content-center">04//portfolio</h1>
 
-<ul class="flex flex-row text-md mt-7 mx-4 lg:p-10 md:p-10   mb-5">
+<ul class="flex flex-row sm:flex-wrap text-md mt-7 mx-4 lg:p-10 md:p-10   mb-5">
     <li class="lg:ml-7 mr-6 text-orange-300">Filter by</li>
     <li class="mr-6"><a data-category="all"  class="text-orange-300 hover:text-rose-300" href="#">//All</a></li>
     <li class="mr-6"><a data-category="development"  class="text-orange-300 hover:text-rose-300" href="#">01//Development</a></li>
