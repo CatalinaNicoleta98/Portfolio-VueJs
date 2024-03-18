@@ -54,17 +54,17 @@
 
 
                     <!-- CERTIFICATES BTN -->
-
-                    <a href="#about" id="openCertificatesBtn" class="lg:mt-11 md:mt-11 mt-5 hover:opacity-100 hover:text-rose-300 bg-slate-500 rounded-lg text-orange-200 opacity-70 border border-black p-2">Certificates</a>
-
+ 
+                    <a href="#about" id="openCertificatesBtn" class=" mt-5 lg:mt-11 md:mt-11 hover:opacity-100 hover:text-rose-300 bg-slate-500 rounded-lg text-orange-200 opacity-70 border border-black p-2">Certificates</a>
+ 
                     <div id="certificatesModal" class="hidden z-10 fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
-                     <div class="bg-black p-8 rounded-lg">
-                         <!-- Close button -->
+                        <div class="bg-black p-8 rounded-lg">
+                             <!-- Close button -->
                             <button id="closeCertificatesBtn" class=" text-2xl text-gray-500 hover:text-red-700">&times;</button>
-                    
+         
                             <!-- Embedded PDF -->
                             <iframe id="pdfViewer" class=" w-[80vw] h-[80vh] " src="/public/img/Certificates.pdf"></iframe>
-                     </div>
+                        </div>
                     </div>
                         
 

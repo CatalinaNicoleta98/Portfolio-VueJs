@@ -8,11 +8,11 @@
 <!-- content table starts -->
 
 
-<div class="content m-6 p-6 flex flex-col justify-center items-center md:flex-col lg:flex-row">
+<div class="content m-6 p-6 flex flex-col justify-center items-center lg:flex-row">
 
     <!-- web development card -->
 
-    <div class="w-[90vw] h-96  sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
+    <div class="w-[90vw] h-[55vh]  sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
 
 
         <!-- title of first column -->
@@ -41,7 +41,7 @@
     <!-- ux card -->
 
 
-    <div class="w-[90vw] h-96  sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
+    <div class="w-[90vw] h-[55vh]  sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
 
 
         <!-- title of second column -->
@@ -69,7 +69,7 @@
 
     <!-- content creation card-->
 
-    <div class="h-96 w-[90vw] sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
+    <div class="h-[55vh] w-[90vw] sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
 
 
          <!-- title of third column -->
