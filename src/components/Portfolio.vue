@@ -222,6 +222,43 @@
 
 <script setup>
 
+//portfolio filter
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all filter links and portfolio items
+    const filterLinks = document.querySelectorAll('.portfolio ul li a');
+    const portfolioItems = document.querySelectorAll('.portfolio .flex .flex-col');
+
+    // Add click event listeners to filter links
+    filterLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const filterCategory = link.getAttribute('data-category');
+
+            // Hide all items
+            portfolioItems.forEach(function (item) {
+                item.style.display = 'none';
+            });
+
+            // Show all items if "All" is selected
+            if (filterCategory === 'all') {
+                portfolioItems.forEach(function (item) {
+                    item.style.display = 'flex';
+                });
+            } else {
+                // Show items with the selected category
+                const filteredItems = document.querySelectorAll(`#${filterCategory}`);
+                filteredItems.forEach(function (item) {
+                    item.style.display = 'flex';
+                });
+            }
+        });
+    });
+});
+
+
+
+// trapholt modal
 import { ref } from 'vue';
 
 const trapholtModalVisible = ref(false);
