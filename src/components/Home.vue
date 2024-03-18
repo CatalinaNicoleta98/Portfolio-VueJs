@@ -1,20 +1,64 @@
 <template>
-  <div id="home" class="header">
+   <div id="home" class="header">
 
 <!-- NAVIGATION, MAKE STICKY -->
- <nav class="flex flex-row items-center justify-center mx-0 md:mx-auto lg:mx-auto w-[100vw]  bg-slate-500 bg-opacity-50 z-10 fixed">
+ <nav class="flex flex-row lg:items-center lg:justify-center md:items-center md:justify-center justify-start mx-auto w-[100%]  bg-slate-500 bg-opacity-50 z-10 fixed">
      
-         <ul class="flex flex-row text-md mt-7 mb-5">
+         <ul class=" hidden md:flex lg:flex flex-row text-md mt-7 mb-5">
              <li class="ml-7 mr-6"><a class="text-orange-300 hover:text-rose-300" href="#home">01//home</a></li>
              <li class="mr-6"><a class="text-orange-300 hover:text-rose-300" href="#about">02//about</a></li>
              <li class="mr-6"><a class="text-orange-300 hover:text-rose-300" href="#expertise">03//expertise</a></li>
              <li class="mr-11"><a class="text-orange-300 hover:text-rose-300" href="#portfolio">04//portfolio</a></li>
          </ul>
+
+
+
+         <!-- burger menu -->
+         <div class="lg:hidden md:hidden">
+             <button class="navbar-burger flex items-center text-orange-300 hover:text-rose-300 p-3">
+                 <i class="fa-solid fa-bars text-4xl"></i>
+             </button>
+         </div>
+
+         <div class="navbar-menu relative z-50 hidden">
+ 
+             <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-[80vw] h-[50vh] py-6 px-6 bg-slate-500 bg-opacity-50">
+                 <div class="flex items-center mb-8">
+                     <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                         <svg class="h-12" alt="logo" viewBox="0 0 10240 10240">
+                             <!-- SVG Path for the logo -->
+                         </svg>
+                     </a>
+                     <button class="navbar-close">
+                         <i class=" text-2xl text-red-600 fa-solid fa-x"></i>
+                         
+                     </button>
+                 </div>
+                 <div>
+                     <ul class="flex flex-col">
+                         <li class="mb-1">
+                             <a class=" text-xl  text-orange-300 hover:text-rose-300" href="#home">01//home</a>
+                         </li>
+                         <li class="mb-1">
+                             <a class=" text-xl  text-orange-300 hover:text-rose-300" href="#about">02//about</a>
+                         </li>
+                         <li class="mb-1">
+                             <a class=" text-xl  text-orange-300 hover:text-rose-300" href="#expertise">03//expertise</a>
+                         </li>
+                         <li class="mb-1">
+                             <a class=" text-xl  text-orange-300 hover:text-rose-300" href="#portfolio">04//portfolio</a>
+                         </li>
+                         
+                     </ul>
+                 </div>
+                 
+             </nav>
+         </div>
      
  </nav>
  
 
- <div class="center flex flex-col">
+ <div class="center flex flex-col justify-center items-center  ">
 
      <!-- THIS IS NAME SVG -->
 
@@ -74,3 +118,49 @@ body{
 }
 
 </style>
+
+<script setup>
+// Burger menus
+document.addEventListener('DOMContentLoaded', function() {
+    // open
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    // close
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+    if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+});
+
+
+
+</script>

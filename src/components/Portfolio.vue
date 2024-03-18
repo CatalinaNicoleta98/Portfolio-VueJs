@@ -5,9 +5,9 @@
 
 <div id="portfolio" class="portfolio my-72 py-4 w-[100vw] h-auto">
 
-<h1 class="text-7xl mb-32 mx-auto flex justify-center items-center content-center">04//portfolio</h1>
+    <h1 class="lg:text-7xl md:text-7xl text-5xl mb-32 mx-auto flex justify-center items-center content-center">04//portfolio</h1>
 
-<ul class="flex flex-row sm:flex-wrap text-md mt-7 mx-4 lg:p-10 md:p-10   mb-5">
+<ul class="flex lg:flex-row md:flex-row flex-wrap text-md mt-7 mx-4 lg:p-10 md:p-10   mb-5">
     <li class="lg:ml-7 mr-6 text-orange-300">Filter by</li>
     <li class="mr-6"><a data-category="all"  class="text-orange-300 hover:text-rose-300" href="#">//All</a></li>
     <li class="mr-6"><a data-category="development"  class="text-orange-300 hover:text-rose-300" href="#">01//Development</a></li>
@@ -19,9 +19,9 @@
 
 <div id="mywork" class="portfolio m-4 p-10 flex flex-col justify-center items-center lg:flex-row lg:flex-wrap ">
     <!-- trapholt card -->
-    <div>
+    
     <div id="development" class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-start items-start flex-col">
-      <a href="#portfolio" @click="openModal"><img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100" src="/public/img/trapholt.jpg" alt=""></a>
+      <a href="#portfolio" @click="openModal"><img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100 " src="/public/img/trapholt.jpg" alt=""></a>
       <div class="p-5">
         <h5 class=" text-2xl font-bold tracking-tight text-white">Trapholt</h5>
         <p class="mb-2 text-sm font-light tracking-tight  text-white">Development</p>
@@ -47,11 +47,11 @@
         </div>
       </div>
     </div>
-  </div>
+  
 
     <!-- remotely card -->
     <div id="ux" class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-start items-start flex-col">
-        <a href="#portfolio" id="openRemotelyBtn"><img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100   " src="/public/img/remotely.png" alt=""></a>
+        <a href="#portfolio" id="openRemotelyBtn"><img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100    " src="/public/img/remotely.png" alt=""></a>
         <div class="p-5">
             <h5 class=" text-2xl font-bold tracking-tight text-white">Remotely</h5>
             <p class="mb-2 text-sm font-light tracking-tight  text-white">UI/UX</p>
@@ -87,7 +87,7 @@
 
     <!-- mini me card -->
     <div id="creation" class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-start items-start flex-col">
-       <a href="#portfolio" id="openMiniMeBtn"> <img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100    " src="/public/img/mini.png" alt=""></a>
+       <a href="#portfolio" id="openMiniMeBtn"> <img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100     " src="/public/img/mini.png" alt=""></a>
         <div class="p-5">
             <h5 class=" text-2xl font-bold tracking-tight text-white">Mini Me</h5>
             <p class="mb-2 text-sm font-light tracking-tight  text-white">Content Creation</p>
@@ -124,7 +124,7 @@
 
     <!-- $tockhub card -->
     <div id="ux" class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-start items-start flex-col">
-        <img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100   " src="/public/img/stock.png" alt="">
+        <img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100   " src="/public/img/stock.png" alt="">
         <div class="p-5">
             <h5 class=" text-2xl font-bold tracking-tight text-white">$tockHub</h5>
             <p class="mb-2 text-sm font-light tracking-tight  text-white">UI/UX</p>
@@ -135,7 +135,7 @@
     </div>
     <!-- starbucks-->
     <div id="creation" class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-start items-start flex-col">
-        <a href="#portfolio" id="openStarbucksBtn"><img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100    " src="/public/img/ad.jpeg" alt=""></a>
+        <a href="#portfolio" id="openStarbucksBtn"><img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100     " src="/public/img/ad.jpeg" alt=""></a>
         <div class="p-5">
             <h5 class=" text-2xl font-bold tracking-tight text-white">Starbucks</h5>
             <p class="mb-2 text-sm font-light tracking-tight  text-white">Content Creation</p>
@@ -175,7 +175,7 @@
     </div>
     <!-- chatognito-->
     <div id="creation" class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-start items-start flex-col">
-        <img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100    " src="/public/img/chatognito.png" alt="">
+        <img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100    " src="/public/img/chatognito.png" alt="">
         <div class="p-5">
             <h5 class=" text-2xl font-bold tracking-tight text-white">Chatognito</h5>
             <p class="mb-2 text-sm font-light tracking-tight  text-white">Content Creation</p>
@@ -186,7 +186,7 @@
     </div>
     <!-- videocv-->
     <div id="creation" class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-start items-start flex-col">
-        <img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100   " src="/public/img/me.jpg" alt="">
+        <img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100  " src="/public/img/me.jpg" alt="">
         <div class="p-5">
             <h5 class=" text-2xl font-bold tracking-tight text-white">Video CV</h5>
             <p class="mb-2 text-sm font-light tracking-tight  text-white">Content Creation</p>
@@ -198,7 +198,7 @@
 
     <!-- welcome to-->
     <div id="creation" class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-start items-start flex-col">
-        <img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100   " src="/public/img/welcometo.png" alt="">
+        <img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100  " src="/public/img/welcometo.png" alt="">
         <div class="p-5">
             <h5 class=" text-2xl font-bold tracking-tight text-white">Welcome To</h5>
             <p class="mb-2 text-sm font-light tracking-tight  text-white">Content Creation</p>
@@ -221,6 +221,7 @@
 </template>
 
 <script setup>
+
 import { ref } from 'vue';
 
 const trapholtModalVisible = ref(false);

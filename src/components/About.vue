@@ -3,7 +3,7 @@
 
       <div id="about" class="about mt-72 pt-4 w-[100vw] h-auto ">
 
-<h1 class="text-7xl mb-32 mx-auto flex justify-center items-center content-center">02//about</h1>
+        <h1 class="lg:text-7xl md:text-7xl text-5xl mb-32 mx-auto flex justify-center items-center content-center">02//about</h1>
 
 
 <!-- ABOUT ME -->
@@ -11,8 +11,8 @@
 <div class="about my-2">
     <div class="flex flex-col p-10 lg:flex-row md:flex-row justify-center">
 
-        <div class="photo mx-4 w-[42%] mb-3"><img src="/public/img/cartoon.jpg" alt="">
-    </div>
+        <div class="photo mx-4 w-[50%] mb-5"><img src="/public/img/cartoon.jpg" alt="">
+        </div>
 
         <div class="mx-4 mb-3 w-[100%] lg:w-[50%] md:w-[50%]">
             <p class="text-xl mb-11">My name is Catalina and I am a 25 year old multimedia-design student, focusing on learning skills that will help me become a front-end developer.
@@ -21,50 +21,57 @@
              <br>I believe we could collaborate and create something amazing together! 
             </p>
 
-            <!-- VIDEO CV BTN -->
+                <div class="flex lg:flex-row md:flex-row flex-wrap">
+                            <!-- VIDEO CV BTN -->
 
-            <a href="#about" id="openVideoBtn" class="mt-11 hover:opacity-100 hover:text-rose-300 bg-slate-500 rounded-lg text-orange-200 opacity-70 border border-black p-2">Video CV</a>
-            <!-- Video Modal -->
-            <div id="videoModal" class="hidden z-10 text-lg fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
-                <div class="bg-black p-8 rounded-lg">
-                    <!-- Close button -->
-                    <button id="closeVideoBtn" class=" text-2xl text-gray-500 hover:text-red-700">&times;</button>
+                    <a href="#about" id="openVideoBtn" class="mt-11 mr-3 hover:opacity-100 hover:text-rose-300 bg-slate-500 rounded-lg text-orange-200 opacity-70 border border-black p-2">Video CV</a>
+                    <!-- Video Modal -->
+                    <div id="videoModal" class="hidden z-10 text-lg fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
+                     <div class="bg-black p-8 rounded-lg">
+                         <!-- Close button -->
+                            <button id="closeVideoBtn" class=" text-2xl text-gray-500 hover:text-red-700">&times;</button>
                     
-                    <!-- YouTube player iframe -->
-                    <iframe id="videoPlayer" class=" w-[80vw] h-[80vh] " src="https://www.youtube.com/embed/3p2HhEIpnqI" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
+                            <!-- YouTube player iframe -->
+                            <iframe id="videoPlayer" class=" w-[80vw] h-[80vh] " src="https://www.youtube.com/embed/3p2HhEIpnqI" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
             
 
-                <!-- SEE CV BTN -->
+                        <!-- SEE CV BTN -->
 
 
-            <a href="#about" id="openDownloadBtn" class="mt-11 hover:opacity-100 hover:text-rose-300 bg-slate-500 rounded-lg text-orange-200 opacity-70 border border-black p-2">Download CV</a>
+                    <a href="#about" id="openDownloadBtn" class="mt-11 mr-3 hover:opacity-100 hover:text-rose-300 bg-slate-500 rounded-lg text-orange-200 opacity-70 border border-black p-2">Download CV</a>
 
-            <div id="downloadModal" class="hidden z-10 fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
-                <div class="bg-black p-8 rounded-lg">
-                    <!-- Close button -->
-                    <button id="closeDownloadBtn" class=" text-2xl text-gray-500 hover:text-red-700">&times;</button>
+                    <div id="downloadModal" class="hidden z-10 fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
+                     <div class="bg-black p-8 rounded-lg">
+                            <!-- Close button -->
+                            <button id="closeDownloadBtn" class=" text-2xl text-gray-500 hover:text-red-700">&times;</button>
                     
-                    <!-- Embedded PDF -->
-                    <iframe id="pdfViewer" class=" w-[80vw] h-[80vh] " src="/public/img/CV.pdf"></iframe>
-                </div>
-            </div>
+                         <!-- Embedded PDF -->
+                            <iframe id="pdfViewer" class=" w-[80vw] h-[80vh] " src="/public/img/CV.pdf"></iframe>
+                        </div>
+                    </div>
 
 
-            <!-- CERTIFICATES BTN -->
+                    <!-- CERTIFICATES BTN -->
 
-            <a href="#about" id="openCertificatesBtn" class="mt-11 hover:opacity-100 hover:text-rose-300 bg-slate-500 rounded-lg text-orange-200 opacity-70 border border-black p-2">Certificates</a>
+                    <a href="#about" id="openCertificatesBtn" class="lg:mt-11 md:mt-11 mt-5 hover:opacity-100 hover:text-rose-300 bg-slate-500 rounded-lg text-orange-200 opacity-70 border border-black p-2">Certificates</a>
 
-            <div id="certificatesModal" class="hidden z-10 fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
-                <div class="bg-black p-8 rounded-lg">
-                    <!-- Close button -->
-                    <button id="closeCertificatesBtn" class=" text-2xl text-gray-500 hover:text-red-700">&times;</button>
+                    <div id="certificatesModal" class="hidden z-10 fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
+                     <div class="bg-black p-8 rounded-lg">
+                         <!-- Close button -->
+                            <button id="closeCertificatesBtn" class=" text-2xl text-gray-500 hover:text-red-700">&times;</button>
                     
-                    <!-- Embedded PDF -->
-                    <iframe id="pdfViewer" class=" w-[80vw] h-[80vh] " src="/public/img/Certificates.pdf"></iframe>
+                            <!-- Embedded PDF -->
+                            <iframe id="pdfViewer" class=" w-[80vw] h-[80vh] " src="/public/img/Certificates.pdf"></iframe>
+                     </div>
+                    </div>
+                        
+
+
+
+
                 </div>
-            </div>
             
             
             
@@ -78,14 +85,14 @@
 
 <!-- HOBBIES -->
 
-<h1 class="p-10 my-32 text-6xl text-center">//hobbies</h1>
+<h1 class="p-10 my-32 lg:text-7xl md:text-7xl text-5xl text-center">//hobbies</h1>
 
 <h2 class=" px-20 lg:px-10 md:px-10 lg:mx-4 md:mx-4 text-xl font-medium">While my professional focus is on developing, in my free time I have simple yet relatable hobbies that help keeping me busy and entertained.</h2>
 
 <div id="hobbies" class="hobbies m-4 p-10 flex flex-col justify-center items-center lg:flex-row lg:flex-wrap ">
     <!-- reading card -->
     <div class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-center items-center flex-col">
-        <img class=" lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100   w-80 h-72 " src="/public/img/read.jpeg" alt="">
+        <img class=" lg:opacity-50 lg:hover:opacity-100 w-80 h-72 " src="/public/img/read.jpeg" alt="">
         <div class="p-5">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Reading</h5>
         </div>
@@ -93,7 +100,7 @@
 
     <!-- cooking card -->
     <div class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-center items-center flex-col">
-        <img class="lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100  w-80 h-72 " src="/public/img/pizza.jpg" alt="">
+        <img class="lg:opacity-50 lg:hover:opacity-100  w-80 h-72 " src="/public/img/pizza.jpg" alt="">
         <div class="p-5">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Cooking</h5>
         </div>
@@ -101,7 +108,7 @@
 
     <!-- painting card -->
     <div class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow flex justify-center items-center flex-col">
-        <img class=" lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100 w-80 h-72" src="/public/img/painting.jpg" alt="">
+        <img class=" lg:opacity-50 lg:hover:opacity-100 w-80 h-72" src="/public/img/painting.jpg" alt="">
         <div class="p-5">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Painting</h5>
         </div>
@@ -109,21 +116,21 @@
 
     <!-- discovering the outdoors card -->
     <div class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow flex justify-center items-center flex-col">
-        <img class="lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100  w-80 h-72 " src="/public/img/outdoors.jpg" alt="">
+        <img class="lg:opacity-50 lg:hover:opacity-100   w-80 h-72 " src="/public/img/outdoors.jpg" alt="">
         <div class="p-5">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Outdoors</h5>
         </div>
     </div>
     <!-- listening to music-->
     <div class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow flex justify-center items-center flex-col">
-        <img class="lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100   w-80 h-72 " src="/public/img/music.png" alt="">
+        <img class="lg:opacity-50 lg:hover:opacity-100    w-80 h-72 " src="/public/img/music.png" alt="">
         <div class="p-5">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Music</h5>
         </div>
     </div>
     <!-- coding-->
     <div class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow flex justify-center items-center flex-col">
-        <img class="lg:opacity-50 lg:hover:opacity-100 md:opacity-50 md:hover:opacity-100   w-80 h-72 " src="/public/img/coding.jpeg" alt="">
+        <img class="lg:opacity-50 lg:hover:opacity-100  w-80 h-72 " src="/public/img/coding.jpeg" alt="">
         <div class="p-5">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Coding</h5>
         </div>
