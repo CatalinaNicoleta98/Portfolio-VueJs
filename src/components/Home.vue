@@ -104,17 +104,6 @@
 </style>
 
 
-<!-- global style -->
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
-
-
-body{
-  font-family: 'Kode Mono', monospace;
-}
-
-</style>
-
 <script setup>
 
 
