@@ -48,7 +48,7 @@
                             <button id="closeDownloadBtn" class=" text-2xl text-gray-500 hover:text-red-700">&times;</button>
                     
                          <!-- Embedded PDF -->
-                            <iframe id="pdfViewer" class=" w-[80vw] h-[80vh] " src="/public/img/CV.pdf"></iframe>
+                            <iframe id="pdfViewer" class=" w-[80vw] h-[80vh] " src="../img/CV.pdf"></iframe>
                         </div>
                     </div>
 
@@ -63,7 +63,7 @@
                             <button id="closeCertificatesBtn" class=" text-2xl text-gray-500 hover:text-red-700">&times;</button>
          
                             <!-- Embedded PDF -->
-                            <iframe id="pdfViewer" class=" w-[80vw] h-[80vh] " src="/public/img/Certificates.pdf"></iframe>
+                            <iframe id="pdfViewer" class=" w-[80vw] h-[80vh] " src="../img/Certificates.pdf"></iframe>
                         </div>
                     </div>
                         
