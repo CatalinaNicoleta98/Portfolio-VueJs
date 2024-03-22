@@ -60,8 +60,8 @@
 
      <div class=" name flex flex-col justify-center items-center mt-72  bg-black bg-opacity-30 w-[100vw] h-48 lg:h-60 md:h-60  ">
 
-         <h1 class="  text-rose-300 text-4xl lg:text-8xl md:text-7xl font-extrabold"><span class="mr-1 font-outline-2">CATALINA</span> <span class="ml-1">VRINCEANU</span></h1>
-         <h2 class=" text-white text-lg lg:text-4xl md:text-2xl font-bold mt-4">Front-End Developer | Multimedia Designer</h2>
+         <h1 class="  text-rose-300 text-4xl lg:text-8xl md:text-7xl font-extrabold"><span class="mr-1 font-outline-2">{{name}}</span> </h1>
+         <h2 class=" text-white text-lg lg:text-4xl md:text-2xl font-bold mt-4">{{ ocupation }}</h2>
 
          
          
@@ -105,6 +105,9 @@
 
 
 <script setup>
+
+const name = 'CATALINA VRINCEANU';
+const ocupation = 'Front-End Developer | Multimedia Designer';
 
 
 

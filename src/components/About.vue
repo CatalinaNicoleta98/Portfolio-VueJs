@@ -21,51 +21,22 @@
              <br>I believe we could collaborate and create something amazing together! 
             </p>
 
-                <div class="flex lg:flex-row md:flex-row flex-wrap">
-                            <!-- VIDEO CV BTN -->
+                <div id="modals" class="flex lg:flex-row md:flex-row flex-wrap">
+                            <!-- BTN -->
 
-                    <a href="#about" id="openVideoBtn" class="mt-11 mr-3 hover:opacity-100 hover:text-rose-300 bg-slate-500 rounded-lg text-orange-200 opacity-70 border border-black p-2">Video CV</a>
-                    <!-- Video Modal -->
-                    <div id="videoModal" class="hidden z-10 text-lg fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
-                     <div class="bg-black p-8 rounded-lg">
-                         <!-- Close button -->
-                            <button id="closeVideoBtn" class=" text-2xl text-gray-500 hover:text-red-700">&times;</button>
-                    
-                            <!-- YouTube player iframe -->
-                            <iframe id="videoPlayer" class=" w-[80vw] h-[80vh] " src="https://www.youtube.com/embed/3p2HhEIpnqI" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
+                            <a v-for="(modal, index) in modals" :key="index" @click="openModal(index)" href="#modals" class="mt-11 mr-3 hover:opacity-100 hover:text-rose-300 bg-slate-500 rounded-lg text-orange-200 opacity-70 border border-black p-2">{{modal.title}}</a>
+    
+                            <!-- Modal -->
+                            <div v-if="selectedModal !== null" class="fixed inset-0 z-10 flex items-center justify-center bg-black bg-opacity-75">
+                            <div class="bg-black p-8 rounded-lg">
+                                <!-- Close button -->
+                                <button @click="closeModal" class="text-2xl text-gray-500 hover:text-red-700">&times;</button>
+                                <!-- Player iframe -->
+                                <iframe class="w-[80vw] h-[80vh]" :src="modals[selectedModal].source" frameborder="0" allowfullscreen></iframe>
+                             </div>
+                            </div>
             
 
-                        <!-- SEE CV BTN -->
-
-
-                    <a href="#about" id="openDownloadBtn" class="mt-11 mr-3 hover:opacity-100 hover:text-rose-300 bg-slate-500 rounded-lg text-orange-200 opacity-70 border border-black p-2">Download CV</a>
-
-                    <div id="downloadModal" class="hidden z-10 fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
-                     <div class="bg-black p-8 rounded-lg">
-                            <!-- Close button -->
-                            <button id="closeDownloadBtn" class=" text-2xl text-gray-500 hover:text-red-700">&times;</button>
-                    
-                         <!-- Embedded PDF -->
-                            <iframe id="pdfViewer" class=" w-[80vw] h-[80vh] " src="/img/CV.pdf"></iframe>
-                        </div>
-                    </div>
-
-
-                    <!-- CERTIFICATES BTN -->
- 
-                    <a href="#about" id="openCertificatesBtn" class=" mt-5 lg:mt-11 md:mt-11 hover:opacity-100 hover:text-rose-300 bg-slate-500 rounded-lg text-orange-200 opacity-70 border border-black p-2">Certificates</a>
- 
-                    <div id="certificatesModal" class="hidden z-10 fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
-                        <div class="bg-black p-8 rounded-lg">
-                             <!-- Close button -->
-                            <button id="closeCertificatesBtn" class=" text-2xl text-gray-500 hover:text-red-700">&times;</button>
-         
-                            <!-- Embedded PDF -->
-                            <iframe id="pdfViewer" class=" w-[80vw] h-[80vh] " src="../img/Certificates.pdf"></iframe>
-                        </div>
-                    </div>
                         
 
 
@@ -90,51 +61,15 @@
 <h2 class=" px-20 lg:px-10 md:px-10 lg:mx-4 md:mx-4 text-xl font-medium">While my professional focus is on developing, in my free time I have simple yet relatable hobbies that help keeping me busy and entertained.</h2>
 
 <div id="hobbies" class="hobbies m-4 p-10 flex flex-col justify-center items-center lg:flex-row lg:flex-wrap ">
-    <!-- reading card -->
-    <div class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-center items-center flex-col">
-        <img class=" lg:opacity-50 lg:hover:opacity-100 w-80 h-72 " src="/public/img/read.jpeg" alt="">
+    <!-- hobbies cards -->
+    <div v-for="card in cards" :key="card.title" class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-center items-center flex-col">
+        <img class=" lg:opacity-50 lg:hover:opacity-100 w-80 h-72 " :src="card.image"  alt="">
         <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Reading</h5>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{card.title}}</h5>
         </div>
     </div>
 
-    <!-- cooking card -->
-    <div class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow  flex justify-center items-center flex-col">
-        <img class="lg:opacity-50 lg:hover:opacity-100  w-80 h-72 " src="/public/img/pizza.jpg" alt="">
-        <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Cooking</h5>
-        </div>
-    </div>
-
-    <!-- painting card -->
-    <div class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow flex justify-center items-center flex-col">
-        <img class=" lg:opacity-50 lg:hover:opacity-100 w-80 h-72" src="/public/img/painting.jpg" alt="">
-        <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Painting</h5>
-        </div>
-    </div>
-
-    <!-- discovering the outdoors card -->
-    <div class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow flex justify-center items-center flex-col">
-        <img class="lg:opacity-50 lg:hover:opacity-100   w-80 h-72 " src="/public/img/outdoors.jpg" alt="">
-        <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Outdoors</h5>
-        </div>
-    </div>
-    <!-- listening to music-->
-    <div class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow flex justify-center items-center flex-col">
-        <img class="lg:opacity-50 lg:hover:opacity-100    w-80 h-72 " src="/public/img/music.png" alt="">
-        <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Music</h5>
-        </div>
-    </div>
-    <!-- coding-->
-    <div class="max-w-sm  sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow flex justify-center items-center flex-col">
-        <img class="lg:opacity-50 lg:hover:opacity-100  w-80 h-72 " src="/public/img/coding.jpeg" alt="">
-        <div class="p-5">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Coding</h5>
-        </div>
-    </div>
+    
 </div>
 </div>
 
@@ -143,81 +78,42 @@
 
 <script setup>
 
-// Function to open the video modal
+import { ref } from 'vue'
+
+// modals from about section
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const openVideoBtn = document.getElementById('openVideoBtn');
-    const closeVideoBtn = document.getElementById('closeVideoBtn');
-    const videoModal = document.getElementById('videoModal');
+const modals = ref([
+  { title: "Video CV", source: "https://www.youtube.com/embed/3p2HhEIpnqI" },
+  { title: "Download CV", source: "../img/CV.pdf" },
+  { title: "Certificates", source: "../img/Certificates.pdf" },
+]);
 
-    // Function to open the video modal
-    const openVideoModal = () => {
-        videoModal.classList.remove('hidden');
-    };
+// open-close modal function
+const selectedModal = ref(null);
 
-    // Function to close the video modal
-    const closeVideoModal = () => {
-        videoModal.classList.add('hidden');
-        
-        // Stop video playback by resetting the src attribute
-        const videoPlayer = document.getElementById('videoPlayer');
-        videoPlayer.src = '';
-    };
+const openModal = (index) => {
+  selectedModal.value = index;
+};
 
-    // Event listeners for button clicks
-    openVideoBtn.addEventListener('click', openVideoModal);
-    closeVideoBtn.addEventListener('click', closeVideoModal);
-});
+const closeModal = () => {
+  selectedModal.value = null;
+};
+  
 
-
-
-//CV MODAL
-
-document.addEventListener("DOMContentLoaded", function() {
-    const openCertificatesBtn = document.getElementById('openCertificatesBtn');
-    const closeCertificatesBtn = document.getElementById('closeCertificatesBtn');
-    const certificatesModal = document.getElementById('certificatesModal');
-
-    // Function to open the download modal
-    const openCertificatesModal = () => {
-        certificatesModal.classList.remove('hidden');
-    };
-
-    // Function to close the download modal
-    const closeCertificatesModal = () => {
-        certificatesModal.classList.add('hidden');
-    };
-
-    // Event listeners for button clicks
-    openCertificatesBtn.addEventListener('click', openCertificatesModal);
-    closeCertificatesBtn.addEventListener('click', closeCertificatesModal);
-});
+// hobbies cards
+const cards = ref([
+  { title: "Reading", image: "/public/img/read.jpeg" },
+  { title: "Cooking", image: "/public/img/pizza.jpg" },
+  { title: "Painting", image: "/public/img/painting.jpg" },
+  { title: "Outdoors", image: "/public/img/outdoors.jpg" },
+  { title: "Music", image: "/public/img/music.png" },
+  { title: "Coding", image: "/public/img/coding.jpeg" },
+]);
 
 
 
-//certificates modal
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    const openDownloadBtn = document.getElementById('openDownloadBtn');
-    const closeDownloadBtn = document.getElementById('closeDownloadBtn');
-    const downloadModal = document.getElementById('downloadModal');
-
-    // Function to open the download modal
-    const openDownloadModal = () => {
-        downloadModal.classList.remove('hidden');
-    };
-
-    // Function to close the download modal
-    const closeDownloadModal = () => {
-        downloadModal.classList.add('hidden');
-    };
-
-    // Event listeners for button clicks
-    openDownloadBtn.addEventListener('click', openDownloadModal);
-    closeDownloadBtn.addEventListener('click', closeDownloadModal);
-});
 </script>
 
 <style lang="scss" scoped>

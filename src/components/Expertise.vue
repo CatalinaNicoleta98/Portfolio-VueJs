@@ -12,16 +12,16 @@
 
     <!-- web development card -->
 
-    <div class="w-[90vw] h-[55vh]  sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
+    <div v-for="table in tables" :key="table" class="w-[90vw] h-[55vh]  sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
 
 
         <!-- title of first column -->
         <div class="title flex flex-row items-center">
-            <img src="/public/img/webdev.svg" alt="" style="width: 20%;">
+            <img :src="table.image" alt="" style="width: 20%;">
             <div>
-                <p class=" mx-6 mt-6 border-b-4 border-rose-300 font-semibold text-xl md:text-3xl">Front-end</p>
+                <p class=" mx-6 mt-6 border-b-4 border-rose-300 font-semibold text-xl md:text-3xl">{{table.title1}}</p>
                         
-                 <p class=" mx-6  font-semibold text-xl md:text-3xl">Development</p>
+                 <p class=" mx-6  font-semibold text-xl md:text-3xl">{{table.title2}}</p>
             </div>
 
 
@@ -32,67 +32,13 @@
         <div class=" p-6 mt-2 mb-5 mx-3 box border-l-4">
             
             <br>
-            <p class="text-md md:text-xl flex items-center  font-medium">Enthusiastic web development student adept at HTML, CSS, and JavaScript, with a focus on Vue.js for dynamic and engaging interfaces. Eager to contribute and collaborate on innovative web projects.</p>
+            <p class="text-md md:text-xl flex items-center  font-medium">{{table.content}}</p>
 
         </div>
         
     </div>
 
-    <!-- ux card -->
-
-
-    <div class="w-[90vw] h-[55vh]  sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
-
-
-        <!-- title of second column -->
-        <div class="title flex flex-row items-center">
-           <img src="/public/img/ux.svg" alt="" style="width: 30%;">
-           <div>
-            <p class="mx-6 mt-6 border-b-4 border-amber-300 font-semibold text-xl md:text-3xl">UI/UX</p>
-                       
-            <p class="mx-6 md:text-3xl  font-semibold text-xl">Design</p>
-           </div>
-
-       </div>
-
-           <!-- content second column -->
-
-       <div class=" p-6 mt-2 mb-5 mx-3 box border-l-4">
-           
-               <br>
-               <p class="text-md md:text-xl flex items-center  font-medium">Interested  in UI/UX design, I try creating seamless and intuitive user experiences. Proficient in tools like Adobe XD and Figma, I bring creativity and usability together to craft engaging digital interfaces.</p>
-
-       </div>
-       
-   </div>
-
-
-    <!-- content creation card-->
-
-    <div class="h-[55vh] w-[90vw] sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
-
-
-         <!-- title of third column -->
-         <div class="title flex flex-row items-center">
-            <img src="/public/img/adobe.svg" alt="" style="width: 20%;">
-            <div>
-                <p class="mx-6 md:text-3xl mt-6 border-b-4 border-blue-300 font-semibold text-xl">Content</p>
-                        
-                                <p class="mx-6 md:text-3xl  font-semibold text-xl">Creation</p>
-            </div>
-
-        </div>
-
-            <!-- content third column -->
-
-        <div class=" p-6 mt-2 mb-5 mx-3 box border-l-4">
-            
-                <br>
-                <p class="text-md md:text-xl flex items-center  font-medium">Interested in graphic design and video production, I'm familiar with the Adobe creative suite, including Photoshop, Illustrator, InDesign, PremierePro and AfterEfects. Ready to bring creativity and precision to visual projects.</p>
-
-        </div>
-        
-    </div>
+    
 
 </div>
 
@@ -105,6 +51,43 @@
 </template>
 
 <script setup>
+
+import { ref } from 'vue'
+
+const tables = ref(
+    [
+        {
+        image:'../img/webdev.svg',
+        title1:'Front-end',
+        title2:'Development',
+        content:'Enthusiastic web development student adept at HTML, CSS, and JavaScript, with a focus on Vue.js for dynamic and engaging interfaces. Eager to contribute and collaborate on innovative web projects.'
+
+        },
+
+
+        {
+        image:'../img/ux.svg',
+        title1:'UI/UX',
+        title2:'Design',
+        content:'Interested  in UI/UX design, I try creating seamless and intuitive user experiences. Proficient in tools like Adobe XD and Figma, I bring creativity and usability together to craft engaging digital interfaces.'
+
+        },
+
+        {
+        image:'../img/adobe.svg',
+        title1:'Content',
+        title2:'Creation',
+        content:"Interested in graphic design and video production, I'm familiar with the Adobe creative suite, including Photoshop, Illustrator, InDesign, PremierePro and AfterEfects. Ready to bring creativity and precision to visual projects."
+
+        },
+        
+
+
+    ]
+)
+
+
+
 
 </script>
 
