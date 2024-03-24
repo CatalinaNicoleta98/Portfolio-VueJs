@@ -4,34 +4,37 @@
       <div id="portfolio" class="portfolio my-72 py-4 w-[100vw] h-auto">
         <h1 class="lg:text-7xl md:text-7xl text-5xl mb-32 mx-auto flex justify-center items-center content-center">04//portfolio</h1>
   
-        <ul class="flex lg:flex-row md:flex-row flex-wrap text-md mt-7 mx-4 lg:p-10 md:p-10   mb-5">
-                        <li class="lg:ml-7 mr-6 text-orange-300">Filter by</li>
-                        <li class="mr-6"><a data-category="all"  class="text-orange-300 hover:text-rose-300" href="#">//All</a></li>
-                        <li class="mr-6"><a data-category="development"  class="text-orange-300 hover:text-rose-300" href="#">01//Development</a></li>
-                        <li class="mr-6"><a data-category="ux" class="text-orange-300 hover:text-rose-300" href="#">02//UI/UX</a></li>
-                        <li class="mr-7"><a data-category="creation" class="text-orange-300 hover:text-rose-300" href="#">03//Content Creation</a></li>
-                        
+        <ul class="flex lg:flex-row md:flex-row flex-wrap text-md mt-7 mx-4 lg:p-10 md:p-10 mb-5">
+              <li class="lg:ml-7 mr-6 text-orange-300">Filter by</li>
+              <li class="mr-6"><a @click.prevent="filterItems('all')" data-category="all" class="text-orange-300          hover:text-rose-300" href="#">//All</a></li>
+              <li class="mr-6"><a @click.prevent="filterItems('development')" data-category="development" class="text-orange-300          hover:text-rose-300" href="#">01//Development</a></li>
+              <li class="mr-6"><a @click.prevent="filterItems('ux')" data-category="ux" class="text-orange-300          hover:text-rose-300" href="#">02//UI/UX</a></li>
+              <li class="mr-7"><a @click.prevent="filterItems('creation')" data-category="creation" class="text-orange-300          hover:text-rose-300" href="#">03//Content Creation</a></li>
         </ul>
   
+  
         <div id="mywork" class="portfolio m-4 p-10 flex flex-col justify-center items-center lg:flex-row lg:flex-wrap">
-          <div v-for="card in cards" :key="card.title" :id="card.id" class="max-w-sm sm:mb-2 bg-transparent p-2 m-2 rounded-lg shadow flex justify-start items-start flex-col">
+          <div v-for="card in filteredCards" :key="card.title" :id="card.id" class="max-w-sm w-[90vw] h[60vh] bg-gray-900 sm:mb-2  p-2 m-2 rounded-lg shadow flex justify-start items-start flex-col">
             <a href="#portfolio" @click="openModal(card)">
-              <img class="w-72 h-72 lg:opacity-50 lg:hover:opacity-100 " :src="card.image" alt="">
+              <img class="w-[90vw] h-[40vh] lg:opacity-50 lg:hover:opacity-100 " :src="card.image" alt="">
             </a>
             <div class="p-5">
-              <h5 class=" text-2xl font-bold tracking-tight text-white">{{ card.title }}</h5>
-              <p class="mb-2 text-sm font-light tracking-tight text-white">{{ card.category }}</p>
-              <button @click="openModal(card)" class="hover:text-rose-300 text-orange-200">{{ card.button }}</button>
+              <h5 class=" text-3xl mt-4 font-black tracking-tight text-white">{{ card.title }}</h5>
+              <p class="mb-2 text-md font-light tracking-tight text-white">{{ card.category }}</p>
+              <button @click="openModal(card)" class=" mt-5  hover:text-rose-300 text-orange-200 text-xl ">{{ card.button }}</button>
               <div v-if="card.modalVisible" class="fixed inset-0 z-50 overflow-y-auto">
                 <div class="flex items-center justify-center h-auto">
-                  <div class="bg-black p-8 rounded-lg shadow-lg w-[80vw] h-auto">
+                  <div class="bg-black p-8 rounded-lg shadow-lg w-[95vw] h-auto">
                     <button @click="closeModal(card)" class="text-2xl text-gray-500 hover:text-red-700">&times;</button>
                     <div class="flex flex-col justify-center p-5">
                       <p class="mb-2 text-lg font-semibold text-left">{{ card.modal.category }}</p>
                       <p class="text-xl text-left font-medium mb-10 text-rose-300">{{ card.modal.tools }}</p>
                       <h1>{{ card.modal.description }}</h1>
-                      <iframe class="w-[100%] lg:h-[80vh] md:h-[50hv] h-[30vh]" :src="card.modal.source" loop></iframe>
-                      <button><a :href="card.modal.link" class="hover:text-rose-300 text-orange-200 my-5">Visit Page</a></button>
+                      <iframe class="w-[100%] lg:h-[80vh] md:h-[50hv] h-[40vh]" :src="card.modal.source" loop></iframe>
+                      <div class="flex justify-center items-center" v-if="card.modal.link">
+                        <button><a :href="card.modal.link" class="hover:text-rose-300 text-orange-200 my-5">Visit Page</a></button>
+                      </div>
+                      <div v-else=""></div>
                     </div>
                   </div>
                 </div>
@@ -45,7 +48,7 @@
 
 <script setup>
 
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 const cards = ref([
     {    id: 'development',
@@ -167,37 +170,21 @@ const cards = ref([
 
 //portfolio filter
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Get all filter links and portfolio items
-    const filterLinks = document.querySelectorAll('.portfolio ul li a');
-    const portfolioItems = document.querySelectorAll('.portfolio .flex .flex-col');
-
-    // Add click event listeners to filter links
-    filterLinks.forEach(function (link) {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            const filterCategory = link.getAttribute('data-category');
-
-            // Hide all items
-            portfolioItems.forEach(function (item) {
-                item.style.display = 'none';
-            });
-
-            // Show all items if "All" is selected
-            if (filterCategory === 'all') {
-                portfolioItems.forEach(function (item) {
-                    item.style.display = 'flex';
-                });
-            } else {
-                // Show items with the selected category
-                const filteredItems = document.querySelectorAll(`#${filterCategory}`);
-                filteredItems.forEach(function (item) {
-                    item.style.display = 'flex';
-                });
-            }
-        });
-    });
+const filteredCards = computed(() => {
+  if (selectedCategory.value === 'all') {
+    return cards.value;
+  } else {
+    return cards.value.filter(card => card.id === selectedCategory.value);
+  }
 });
+
+// Define a ref for selected category
+const selectedCategory = ref('all');
+
+// Function to filter items based on category
+const filterItems = (category) => {
+  selectedCategory.value = category;
+};
 
 
 
