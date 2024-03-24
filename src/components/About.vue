@@ -120,12 +120,12 @@ const closeModal = () => {
 
 const currentSlide = ref(0);
 const images = ref([
-  {picture: "/public/img/read.jpeg", title: "Reading"},
-  {picture: "/public/img/pizza.jpg", title: "Cooking"},
-  {picture: "/public/img/painting.jpg", title: "Painting"},
-  {picture: "/public/img/outdoors.jpg", title: "Outdoors"},
-  {picture: "/public/img/music.png", title: "Music"},
-  {picture: "/public/img/coding.jpeg", title: "Coding"},
+  {picture: "../img/read.jpeg", title: "Reading"},
+  {picture: "../img/pizza.jpg", title: "Cooking"},
+  {picture: "../img/painting.jpg", title: "Painting"},
+  {picture: "../img/outdoors.jpg", title: "Outdoors"},
+  {picture: "../img/music.png", title: "Music"},
+  {picture: "../img/coding.jpeg", title: "Coding"},
   
 ]);
 
