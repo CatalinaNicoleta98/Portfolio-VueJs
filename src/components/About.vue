@@ -31,8 +31,8 @@
                                   <div class="bg-black p-8 rounded-lg">
                                       <!-- Close button -->
                                       <button @click="closeModal" class="text-2xl text-gray-500 hover:text-red-700">&times;</button>
-                                      <!-- Player iframe -->
-                                      <iframe class="w-[90vw] h-[90vh]" :src="modals[selectedModal].source" frameborder="0" allowfullscreen></iframe>
+                                      <!--iframe -->
+                                      <iframe class="w-[60vw] h-[60vh]" :src="modals[selectedModal].source" frameborder="0" allowfullscreen></iframe>
                                   </div>
                                   </div>
                   
