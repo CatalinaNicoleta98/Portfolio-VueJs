@@ -1,14 +1,14 @@
 <template>
      <!-- EXPERTISE STARTS -->
 
-     <div id="expertise" class="expertise mt-72 py-4 w-[100vw] h-auto ">
+     <div id="expertise" class="expertise mt-72 pt-4 w-[100vw] h-auto ">
 
-        <h1 class="lg:text-7xl md:text-7xl text-5xl mx-auto mb-32 flex justify-center items-center content-center">03//expertise</h1>
+        <h1 class="lg:text-7xl md:text-7xl text-5xl mx-auto mb-32 flex justify-center font-black text-orange-400 items-center content-center">03//expertise</h1>
 
 <!-- content table starts -->
 
 
-<div class="content m-6 p-6 flex flex-col justify-center items-center lg:flex-row">
+<div class="content m-6 p-10 flex flex-col justify-center items-center lg:flex-row">
 
     <!-- web development card -->
 
@@ -51,40 +51,10 @@
 </template>
 
 <script setup>
-
-import { ref } from 'vue'
-
-const tables = ref(
-    [
-        {
-        image:'../img/webdev.svg',
-        title1:'Front-end',
-        title2:'Development',
-        content:'Enthusiastic web development student adept at HTML, CSS, and JavaScript, with a focus on Vue.js for dynamic and engaging interfaces. Eager to contribute and collaborate on innovative web projects.'
-
-        },
+//import the tables from the expertise.js module
+import { tables } from '@/modules/expertise.js';
 
 
-        {
-        image:'../img/ux.svg',
-        title1:'UI/UX',
-        title2:'Design',
-        content:'Interested  in UI/UX design, I try creating seamless and intuitive user experiences. Proficient in tools like Adobe XD and Figma, I bring creativity and usability together to craft engaging digital interfaces.'
-
-        },
-
-        {
-        image:'../img/adobe.svg',
-        title1:'Content',
-        title2:'Creation',
-        content:"Interested in graphic design and video production, I'm familiar with the Adobe creative suite, including Photoshop, Illustrator, InDesign, PremierePro and AfterEfects. Ready to bring creativity and precision to visual projects."
-
-        },
-        
-
-
-    ]
-)
 
 
 
