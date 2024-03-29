@@ -3,7 +3,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-AOS.init();
+AOS.init({disable: 'mobile'});
 
 
 
