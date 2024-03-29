@@ -1,5 +1,5 @@
 <template>
-   <div id="home" class="header">
+   <div data-aos="fade-in" id="home" class="header">
 
 <!-- NAVIGATION, MAKE STICKY -->
  <nav class="flex flex-row lg:items-center lg:justify-center md:items-center md:justify-center justify-start mx-auto w-[100%]  bg-black bg-opacity-50 z-10 fixed">
@@ -15,41 +15,36 @@
 
          <!-- burger menu -->
          <div class="lg:hidden md:hidden">
-             <button class="navbar-burger flex items-center text-orange-300 hover:text-rose-300 p-3">
-                 <i class="fa-solid fa-bars text-4xl"></i>
-             </button>
-         </div>
+      <button class="navbar-burger flex items-center text-orange-300 hover:text-rose-300 p-3" @click="toggleMenu">
+        <i class="fa-solid fa-bars text-4xl"></i>
+      </button>
+    </div>
 
-         <div class="navbar-menu relative z-50 hidden">
- 
-             <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-[80vw] h-[50vh] py-6 px-6 bg-black bg-opacity-50">
-                 <div class="flex items-center mb-8">
-                    
-                     <button class="navbar-close">
-                         <i class=" text-end text-6xl text-transparent fa-solid fa-x"></i>
-                         
-                     </button>
-                 </div>
-                 <div>
-                     <ul class="flex flex-col">
-                         <li class="mb-10">
-                             <a class=" text-xl font-bold  text-orange-300 hover:text-rose-300" href="#home">01//home</a>
-                         </li>
-                         <li class="mb-10">
-                             <a class=" text-xl font-bold  text-orange-300 hover:text-rose-300" href="#about">02//about</a>
-                         </li>
-                         <li class="mb-10">
-                             <a class=" text-xl font-bold  text-orange-300 hover:text-rose-300" href="#expertise">03//expertise</a>
-                         </li>
-                         <li class="mb-10">
-                             <a class=" text-xl font-bold  text-orange-300 hover:text-rose-300" href="#portfolio">04//portfolio</a>
-                         </li>
-                         
-                     </ul>
-                 </div>
-                 
-             </nav>
-         </div>
+    <div class="navbar-menu relative z-50" :class="{ 'hidden': !menuOpen }">
+      <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-[80vw] h-[50vh] py-6 px-6 bg-black bg-opacity-50">
+        <div class="flex items-center mb-8">
+          <button class="navbar-close" @click="toggleMenu">
+            <i class=" text-end text-6xl text-transparent fa-solid fa-x"></i>
+          </button>
+        </div>
+        <div>
+          <ul class="flex flex-col">
+            <li class="mb-10">
+              <a class=" text-xl font-bold  text-orange-300 hover:text-rose-300" href="#home" @click="closeMenu">01//home</a>
+            </li>
+            <li class="mb-10">
+              <a class=" text-xl font-bold  text-orange-300 hover:text-rose-300" href="#about" @click="closeMenu">02//about</a>
+            </li>
+            <li class="mb-10">
+              <a class=" text-xl font-bold  text-orange-300 hover:text-rose-300" href="#expertise" @click="closeMenu">03//expertise</a>
+            </li>
+            <li class="mb-10">
+              <a class=" text-xl font-bold  text-orange-300 hover:text-rose-300" href="#portfolio" @click="closeMenu">04//portfolio</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
      
  </nav>
  
@@ -58,10 +53,10 @@
 
      <!-- THIS IS NAME-->
 
-     <div class=" name flex flex-col justify-center items-center mt-72  bg-black bg-opacity-30 w-[100vw] h-48 lg:h-60 md:h-60  ">
+     <div  class=" name flex flex-col justify-center items-center mt-72  bg-black bg-opacity-50 w-[100vw] h-48 lg:h-60 md:h-60  ">
 
-         <h1 class="  text-rose-300 text-4xl lg:text-8xl md:text-7xl font-black"><span class="mr-1 font-outline-2">{{name}}</span> </h1>
-         <h2 class=" text-white text-lg lg:text-4xl md:text-2xl font-bold mt-4">{{ ocupation }}</h2>
+         <h1 data-aos="fade-up-right" data-aos-duration="2000" class="text-rose-300 text-4xl lg:text-8xl md:text-7xl font-black"><span class="mr-1 font-outline-2">{{name}}</span> </h1>
+         <h2 data-aos="fade-up-left" data-aos-duration="2000"  class=" text-white text-lg lg:text-4xl md:text-2xl font-bold mt-4">{{ ocupation }}</h2>
 
          
          
@@ -105,58 +100,22 @@
 
 
 <script setup>
+ import { ref } from 'vue';
 
 const name = 'CATALINA VRINCEANU';
 const ocupation = 'Front-End Developer | Multimedia Designer';
 
+// Burger menu function
 
+const menuOpen = ref(false);
 
+const toggleMenu = () => {
+  menuOpen.value = !menuOpen.value;
+};
 
-
-
-
-
-
-// Burger menus
-document.addEventListener('DOMContentLoaded', function() {
-    // open
-    const burger = document.querySelectorAll('.navbar-burger');
-    const menu = document.querySelectorAll('.navbar-menu');
-
-    if (burger.length && menu.length) {
-        for (var i = 0; i < burger.length; i++) {
-            burger[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
-
-    // close
-    const close = document.querySelectorAll('.navbar-close');
-    const backdrop = document.querySelectorAll('.navbar-backdrop');
-
-    if (close.length) {
-        for (var i = 0; i < close.length; i++) {
-            close[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
-
-    if (backdrop.length) {
-        for (var i = 0; i < backdrop.length; i++) {
-            backdrop[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
-});
+const closeMenu = () => {
+  menuOpen.value = false;
+};
 
 
 

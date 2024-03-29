@@ -5,7 +5,7 @@ import { ref } from 'vue';
 
 export const modals = ref([
   { title: "//Video CV", source: "https://www.youtube.com/embed/3p2HhEIpnqI" },
-  { title: "//Download CV", source: "../img/CV.pdf" },
+  { title: "//Download CV", source: "../img/CV.pdf"},
   { title: "//Certificates", source: "../img/Certificates.pdf" },
 ]);
 
