@@ -3,7 +3,7 @@
 
      <div id="expertise" class="expertise mt-72 pt-4 w-[100vw] h-auto ">
 
-        <h1 data-aos="fade-up" class="lg:text-7xl md:text-7xl text-5xl mx-auto mb-32 flex justify-center font-black text-orange-400 items-center content-center">03//expertise</h1>
+        <h1 class="lg:text-7xl md:text-7xl text-5xl mx-auto mb-32 flex justify-center font-black text-orange-400 items-center content-center">03//expertise</h1>
 
 <!-- content table starts -->
 
@@ -12,7 +12,7 @@
 
     <!-- web development card -->
 
-    <div data-aos="fade-down-right" v-for="table in tables" :key="table" class="w-[80vw] h-[55vh] lg:h-[70vh] md:h-[60vh]  sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
+    <div v-for="table in tables" :key="table" class="w-[80vw] h-[55vh] lg:h-[70vh] md:h-[60vh]  sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
 
 
         <!-- title of first column -->

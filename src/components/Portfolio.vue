@@ -3,9 +3,9 @@
      
       <div id="portfolio" class="portfolio my-72 py-4  w-[100vw] h-auto">
          <!-- PORTFOLIO PROJECTS STARTS -->
-        <h1 data-aos="fade-up" class="lg:text-7xl md:text-7xl text-5xl mb-32 mx-auto flex justify-center font-black text-orange-400 items-center content-center">04//portfolio</h1>
+        <h1  class="lg:text-7xl md:text-7xl text-5xl mb-32 mx-auto flex justify-center font-black text-orange-400 items-center content-center">04//portfolio</h1>
   
-        <ul data-aos="fade-in" class=" flex lg:flex-row md:flex-row flex-wrap text-md mt-7 mx-4 lg:p-10 md:p-10 mb-5">
+        <ul class=" flex lg:flex-row md:flex-row flex-wrap text-md mt-7 mx-4 lg:p-10 md:p-10 mb-5">
               <li class="lg:ml-7 mr-6 mt-2 text-orange-300">Filter by</li>
               <li class="mr-6 mt-2"><a @click.prevent="filterItems('all')" data-category="all" class="text-orange-300          hover:text-rose-300" href="#">//All</a></li>
               <li class="mr-6 mt-2"><a @click.prevent="filterItems('development')" data-category="development" class="text-orange-300          hover:text-rose-300" href="#">01//Development</a></li>
@@ -29,7 +29,7 @@
               <div v-if="card.modalVisible" class="fixed inset-0 z-50 overflow-y-auto">
                 <div class="flex items-center justify-center bg-slate-500 bg-opacity-50 h-auto">
                   <div class="bg-black m-1 p-4 rounded-lg shadow-lg w-[95%] h-auto  border-orange-300 border-2">
-                    <div data-aos="fade-up-in"  class="flex flex-col justify-center py-5">
+                    <div class="flex flex-col justify-center py-5">
                       <p class="mb-2 text-lg font-semibold text-left">{{ card.modal.category }}</p>
                       <p class="text-xl text-left font-medium mb-10 text-rose-300">{{ card.modal.tools }}</p>
                       <h1 class="mb-10">{{ card.modal.description }}</h1>
