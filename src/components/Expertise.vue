@@ -10,12 +10,12 @@
 
 <div class="content m-6 px-10 flex flex-col justify-center items-center lg:flex-row">
 
-    <!-- web development card -->
+    <!--card -->
 
-    <div v-for="table in tables" :key="table" class="w-[80vw] h-[55vh] lg:h-[70vh] md:h-[60vh]  sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
+    <div v-for="table in tables" :key="table" class="w-[80vw] h-[55vh] lg:h-[75vh] md:h-[60vh]  sm:mb-2 bg-transparent py-12 m-2  border-8 border-white shadow flex justify-center items-center flex-col">
 
 
-        <!-- title of first column -->
+        <!-- title  -->
         <div class="title flex flex-row items-center">
             <img :src="table.image" alt="" style="width: 20%;">
             <div>

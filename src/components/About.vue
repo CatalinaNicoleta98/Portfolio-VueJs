@@ -26,7 +26,7 @@
                                      
                                   
                                       <!--iframe -->
-                                      <iframe class="w-[90%] h-[100vh] " :src="modals[selectedModal].source" frameborder="0" allowfullscreen></iframe>
+                                      <iframe class=" w-[100%] h-[100vh] lg:w-[90%] lg:h-[100vh] md:w-[90%] md:h[100vh] " :src="modals[selectedModal].source" frameborder="0" allowfullscreen></iframe>
 
                                        <!-- Close button -->
                                       <button @click="closeModal" class="text-xl mt-5 hover:text-rose-300 text-orange-200">//Close</button>
@@ -64,7 +64,7 @@
 
 
   <!-- HOBBIES -->
-
+  
   <h1 class="p-10 my-32 lg:text-7xl md:text-7xl text-5xl font-bold text-rose-300 text-center">//hobbies</h1>
 
   <p  class=" mx-4 p-10 text-xl font-medium">While my professional focus is on development, in my free time I have simple yet relatable hobbies that help keeping me busy and entertained.</p>
@@ -111,20 +111,6 @@ const toggleParagraphVisibility = () => {
 };
 
 
-// download pdf
-
-
-
-
-const downloadPdf = (pdfSource) => {
-  const link = document.createElement('a');
-  link.href = pdfSource;
-  link.setAttribute('download', '');
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
-
 
 // open-close modal function
 const selectedModal = ref(null);
@@ -160,11 +146,9 @@ intervalId = setInterval(() => {
   currentSlide.value = (currentSlide.value + 1) % images.value.length;
 }, 3000);
 
-
-
-
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+
 
 </style>

@@ -13,6 +13,8 @@ export const cards = ref([
             tools: 'HTML-CSS-BOOTSTRAP-JavaScript',
             description: 'For my first semester exam, I got to work on my biggest project until now. It was a team project, which means that each one of us had it\'s own area of expertise. I, fortunately, got to do a little bit of everything by helping with the design of the logo, printables and report and  working together with my colleague on the UX research. But the main area I worked in was definitely the coding of the website. Below, I invite you to experience the website.',
             source: 'https://danielpincu.com/index.html',
+            link: 'https://danielpincu.com/index.html',
+            repository:'https://github.com/DanielPincu/SemesterProject'
             
         },
     },
@@ -70,7 +72,8 @@ export const cards = ref([
             category: '| Content Creation',
             tools: 'Adobe Illustrator',
             description: 'Chatognito was a private project, together with my colleague. A try on creating a logo for a fictional app but also on learning a little bit more coding. I wanted to create a logo that would be simple, yet memorable and that would represent the website\'s purpose. I used Adobe Illustrator to create it. Bellow you can interact with the website',
-            source: 'https://www.chatognito.com/'
+            source: 'https://www.chatognito.com/',
+            link: 'https://www.chatognito.com/'
         },
     },
 
@@ -99,7 +102,8 @@ export const cards = ref([
             category: '| Content Creation',
             tools: 'Adobe Illustrator - Adobe InDesign',
             description: 'In the first semester, we got to create a digital interactive info-folder presenting a district of our choice from Esbjerg. It was a team project, and we got to work with InDesing and Illustrator more in depth. We decided to present Sædding, bellow you can see the final product.',
-            source: 'https://indd.adobe.com/view/87244edc-9900-46de-b2a3-469e5bea84c4?fbclid=IwAR2_wZCjakJ5VtgfenHROkGvsMfPMAxUnLIvssxdJz4hsRY-oEuJC_1HV5s_aem_AWqwF3nqIPIXr5vVqgMLKbuV7qi6Abpp1mNzjWci7-dv-F9sPMhXksoe2bRh9Bgsg7MzoiWAYqA6FpufkDoyn5al'
+            source: 'https://indd.adobe.com/view/87244edc-9900-46de-b2a3-469e5bea84c4?fbclid=IwAR2_wZCjakJ5VtgfenHROkGvsMfPMAxUnLIvssxdJz4hsRY-oEuJC_1HV5s_aem_AWqwF3nqIPIXr5vVqgMLKbuV7qi6Abpp1mNzjWci7-dv-F9sPMhXksoe2bRh9Bgsg7MzoiWAYqA6FpufkDoyn5al',
+            link:'https://indd.adobe.com/view/87244edc-9900-46de-b2a3-469e5bea84c4?fbclid=IwAR2_wZCjakJ5VtgfenHROkGvsMfPMAxUnLIvssxdJz4hsRY-oEuJC_1HV5s_aem_AWqwF3nqIPIXr5vVqgMLKbuV7qi6Abpp1mNzjWci7-dv-F9sPMhXksoe2bRh9Bgsg7MzoiWAYqA6FpufkDoyn5al'
           
             
         },
