@@ -17,9 +17,9 @@
         <div id="mywork" class="portfolio m-4 px-10 flex flex-col justify-center items-center lg:flex-row lg:flex-wrap md:flex-row md:flex-wrap">
 
           <!-- cards -->
-          <div v-for="card in filteredCards" :key="card.title" :id="card.id" class="w-96 h-auto border-2 mt-4  border-orange-300  bg-gray-900 sm:mb-2  p-2 m-2 rounded-lg shadow flex justify-start items-start flex-col">
+          <div v-for="card in filteredCards" :key="card.title" :id="card.id" class="moving-border w-96 h-auto  mt-4   bg-gray-900 sm:mb-2  p-2 m-2 rounded-lg shadow flex justify-start items-start flex-col">
             <a href="#card" @click="openModal(card)">
-              <img class=" w-96 h-96 lg:opacity-50 lg:hover:opacity-100 " :src="card.image" alt="">
+              <img class=" w-96 h-96  " :src="card.image" alt="">
             </a>
             <div class="p-5">
               <h5 class=" text-3xl mt-4 font-black tracking-tight text-white">{{ card.title }}</h5>
@@ -95,6 +95,38 @@ const closeModal = (card) => {
 };
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.moving-border {
+ 
+  position: relative;
+ 
+  padding: 4px;
+}
+.moving-border::before,
+.moving-border::after {
+  content: "";
+  position: absolute;
+  inset: -0.2rem;
+  z-index: -1;
+  background: linear-gradient(var(--angle), 
+  #FCA4AF,  #000000, #FB923C);
+  animation: rotate 10s linear infinite;
+  border-radius: inherit;
+}
+.moving-border::after {
+  filter: blur(10px);
+}
+@keyframes rotate {
+  0%     { --angle: 0deg; }
+  100%   { --angle: 360deg;
+  }
+}
 
 </style>

@@ -4,7 +4,7 @@ import Home from './components/Home.vue'
 import About from './components/About.vue'
 import Expertise from './components/Expertise.vue'
 import Portfolio from './components/Portfolio.vue'
-import Footer from './components/Footer.vue'
+
 </script>
 
 <template>
@@ -32,7 +32,7 @@ import Footer from './components/Footer.vue'
 <About />
 <Expertise />
 <Portfolio />
-<Footer />
+
  
   
   
