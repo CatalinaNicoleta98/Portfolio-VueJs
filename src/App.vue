@@ -4,6 +4,8 @@ import Home from './components/Home.vue'
 import About from './components/About.vue'
 import Expertise from './components/Expertise.vue'
 import Portfolio from './components/Portfolio.vue'
+import Footer from './components/Footer.vue'
+import Sound from './components/Sound.vue'
 
 </script>
 
@@ -32,6 +34,9 @@ import Portfolio from './components/Portfolio.vue'
 <About />
 <Expertise />
 <Portfolio />
+<Sound />
+<Footer />
+
 
  
   
