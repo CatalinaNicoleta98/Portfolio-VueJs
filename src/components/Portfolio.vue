@@ -95,38 +95,9 @@ const closeModal = (card) => {
 };
 </script>
 
-<style  scoped>
 
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
 
-.moving-border {
- 
-  position: relative;
- 
-  padding: 4px;
-}
-.moving-border::before,
-.moving-border::after {
-  content: "";
-  position: absolute;
-  inset: -0.2rem;
-  z-index: -1;
-  background: linear-gradient(var(--angle), 
-  #FCA4AF,  #000000, #FB923C);
-  animation: rotate 10s linear infinite;
-  border-radius: inherit;
-}
-.moving-border::after {
-  filter: blur(10px);
-}
-@keyframes rotate {
-  0%     { --angle: 0deg; }
-  100%   { --angle: 360deg;
-  }
-}
 
-</style>
+
+
+
