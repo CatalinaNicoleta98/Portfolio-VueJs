@@ -17,4 +17,5 @@ export const images = ref([
   { picture: "../img/outdoors.jpg", title: "Outdoors" },
   { picture: "../img/music.png", title: "Music" },
   { picture: "../img/coding.jpeg", title: "Coding" },
+
 ]);

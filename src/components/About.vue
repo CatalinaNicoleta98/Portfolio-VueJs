@@ -74,7 +74,7 @@
 
 
 
-      <div   class="flex justify-center items-center h-96 md:h-[70vh] lg:h-screen">
+      <div class="flex justify-center items-center h-96 md:h-[70vh] lg:h-screen">
           <div class="mt-3 w-[80vw] lg:h-[80vh] md:h-[50vh] h-[30vh] relative overflow-hidden">
             <div class="flex" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
               <div v-for="(image, index) in images" :key="index" class="flex-shrink-0 w-full relative">
