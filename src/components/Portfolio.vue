@@ -17,7 +17,7 @@
         <div id="mywork" class="portfolio m-4 px-10 flex flex-col justify-center items-center lg:flex-row lg:flex-wrap md:flex-row md:flex-wrap">
 
           <!-- cards -->
-          <div v-for="card in filteredCards" :key="card.title" :id="card.id" class="moving-border w-96 h-auto  mt-4   bg-gray-900 sm:mb-2  p-2 m-2 rounded-lg shadow flex justify-start items-start flex-col">
+          <div v-for="card in filteredCards" :key="card.title" :id="card.id" class="moving-border w-96 h-auto  mt-4  bg-gray-900 sm:mb-2  p-2 m-2 rounded-lg shadow flex justify-start items-start flex-col">
             <a href="#card" @click="openModal(card)">
               <img class=" w-96 h-96  " :src="card.image" alt="">
             </a>
