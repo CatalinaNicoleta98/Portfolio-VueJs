@@ -3,7 +3,7 @@
 
   <div  class="about pt-72 w-[100vw] h-auto bg-gradient-to-b from-[#2C0916] to-black">
 
-              <h1 data-aos="fade-up"  id="about" class="lg:text-7xl md:text-7xl font-black text-orange-400 text-5xl mb-32 mx-auto flex justify-center items-center content-center">02//about</h1>
+              <h1  id="about" class="lg:text-7xl md:text-7xl font-black text-orange-400 text-5xl mb-32 mx-auto flex justify-center items-center content-center">02//about</h1>
 
 
       <!-- ABOUT ME -->
@@ -11,7 +11,7 @@
       <div class="about my-2">
           <div class="flex flex-col p-10 lg:flex-row md:flex-col justify-center items-center">
 
-              <div data-aos="fade-up" data-aos-offset="300" id="modals" class="photo mx-4 w-[100%] lg:w-[50%] md:w-[80%] mb-5"><img src="/public/img/cartoon.jpg" alt="">
+              <div id="modals" class="photo mx-4 w-[100%] lg:w-[50%] md:w-[80%] mb-5"><img src="/public/img/cartoon.jpg" alt="">
 
 
                 <div class="flex flex-row lg:flex-row md:flex-row ">
@@ -43,7 +43,7 @@
 
               </div>
 
-              <div data-aos="fade-up" data-aos-offset="300"  class="mx-4 w-[100%] lg:w-[50%] md:w-[80%] mb-5">
+              <div class="mx-4 w-[100%] lg:w-[50%] md:w-[80%] mb-5">
                   <p class="text-xl mb-20 ">My name is Catalina and I am a 25 year old multimedia-design student, focusing on learning skills that will help me become a front-end developer.
                   I grew up in Romania, but I have been calling Denmark home for the past couple of years.
                   I am passionate about coding, design and learning new things. <span v-if="!isParagraphVisible"  class="animate-pulse text-2xl">...</span>
@@ -65,16 +65,16 @@
 
   <!-- HOBBIES -->
   
-  <h1 data-aos="fade-up" class="p-10 my-32 lg:text-7xl md:text-7xl text-5xl font-bold text-rose-300 text-center">//hobbies</h1>
+  <h1 class="p-10 my-32 lg:text-7xl md:text-7xl text-5xl font-bold text-rose-300 text-center">//hobbies</h1>
 
-  <p data-aos="fade-up" class=" mx-4 p-10 text-xl font-medium">While my professional focus is on development, in my free time I have simple yet relatable hobbies that help keeping me busy and entertained.</p>
+  <p class=" mx-4 p-10 text-xl font-medium">While my professional focus is on development, in my free time I have simple yet relatable hobbies that help keeping me busy and entertained.</p>
 
 
   <!--  carousel -->
 
 
 
-      <div data-aos="fade-up" class="flex justify-center items-center h-96 md:h-[70vh] lg:h-screen">
+      <div class="flex justify-center items-center h-96 md:h-[70vh] lg:h-screen">
           <div class="mt-3 w-[80vw] lg:h-[80vh] md:h-[50vh] h-[30vh] relative overflow-hidden">
             <div class="flex" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
               <div v-for="(image, index) in images" :key="index" class="flex-shrink-0 w-full relative">

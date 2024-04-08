@@ -3,7 +3,7 @@
 
      <div id="expertise" class="expertise mt-72 pt-4 w-[100vw] h-auto ">
 
-        <h1 data-aos="fade-up" class="lg:text-7xl md:text-7xl text-5xl mx-auto mb-32 flex justify-center font-black text-orange-400 items-center content-center">03//expertise</h1>
+        <h1 class="lg:text-7xl md:text-7xl text-5xl mx-auto mb-32 flex justify-center font-black text-orange-400 items-center content-center">03//expertise</h1>
 
 <!-- content table starts -->
 
