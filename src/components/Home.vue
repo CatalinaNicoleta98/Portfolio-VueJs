@@ -10,7 +10,8 @@
              <li class="ml-7 mr-6"><a class="font-bold text-orange-300 hover:text-rose-300" href="#home">01//home</a></li>
              <li class="mr-6"><a class="font-bold text-orange-300 hover:text-rose-300" href="#about">02//about</a></li>
              <li class="mr-6"><a class="font-bold text-orange-300 hover:text-rose-300" href="#expertise">03//expertise</a></li>
-             <li class="mr-11"><a class="font-bold text-orange-300 hover:text-rose-300" href="#portfolio">04//portfolio</a></li>
+             <li class="mr-6"><a class="font-bold text-orange-300 hover:text-rose-300" href="#portfolio">04//portfolio</a></li>
+             <li class="mr-11"><a class="font-bold text-orange-300 hover:text-rose-300" href="#contact">05//contact</a></li>
          </ul>
 
 
@@ -42,6 +43,9 @@
             </li>
             <li class="mb-10">
               <a class=" text-xl font-bold  text-orange-300 hover:text-rose-300" href="#portfolio" @click="closeMenu">04//portfolio</a>
+            </li>
+            <li class="mb-10">
+              <a class=" text-xl font-bold  text-orange-300 hover:text-rose-300" href="#contact" @click="closeMenu">05//contact</a>
             </li>
           </ul>
         </div>

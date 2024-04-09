@@ -6,6 +6,7 @@ import Expertise from './components/Expertise.vue'
 import Portfolio from './components/Portfolio.vue'
 import Footer from './components/Footer.vue'
 import Sound from './components/Sound.vue'
+import Contact from './components/Contact.vue'
 
 
 
@@ -38,6 +39,7 @@ import Sound from './components/Sound.vue'
 <About />
 <Expertise />
 <Portfolio />
+<Contact />
 <Sound />
 <Footer />
 
