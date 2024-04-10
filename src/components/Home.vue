@@ -24,7 +24,7 @@
     </div>
 
     <div class="navbar-menu relative z-50" :class="{ 'hidden': !menuOpen }">
-      <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-[80vw] h-[50vh] py-6 px-6 bg-black bg-opacity-50">
+      <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-[80vw] h-[70vh] py-6 px-6 bg-black bg-opacity-50">
         <div class="flex items-center mb-8">
           <button class="navbar-close" @click="toggleMenu">
             <i class=" text-end text-6xl text-transparent fa-solid fa-x"></i>

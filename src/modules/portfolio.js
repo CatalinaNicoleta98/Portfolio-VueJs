@@ -27,7 +27,7 @@ export const cards = ref([
         modal:{
             category: '| UI/UX',
             tools: 'Adobe XD',
-            description: 'In the first semester, our UX mandatory assignment eas creating a mobile app for students looking for remote jobs.There was no coding involved, the project was mostly about UX research and te final product itself was a app mockup.',
+            description: 'In the first semester, our UX mandatory assignment was creating a mobile app for students looking for remote jobs.There was no coding involved, the project was mostly about UX research and te final product itself was a app mockup.',
             source: '../img/remotelyweb.mp4'
         },
     },
@@ -42,7 +42,7 @@ export const cards = ref([
         modal:{
             category: '| UI/UX',
             tools: 'Adobe XD',
-            description: 'In the first semester, our UX mandatory assignment eas creating a mobile app for students looking for remote jobs.There was no coding involved, the project was mostly about UX research and te final product itself was a app mockup.',
+            description: 'Our second semester UX project was creating a mockup for an app based on whatever idea we came with. The most important part of it was the research and the user testing. I chose to create an app that would help people invest in the stock market. Below you can see the final product.',
             source: '../img/stockhub.mp4'
             
         },
