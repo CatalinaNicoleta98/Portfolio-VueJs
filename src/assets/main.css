@@ -36,7 +36,7 @@ body{
 
   50% { scale: .8; opacity: .5; } /* Start with opacity 0 */
   
-  100% {scale:1; opacity: 1; } /* End with opacity 1 */
+  100% {scale:1; opacity: 1; } /* End with opacity 1 */ 
 }
 
 .move-in {
