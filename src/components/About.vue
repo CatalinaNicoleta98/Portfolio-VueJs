@@ -1,9 +1,9 @@
 <template>
       <!-- HERE STARTS about SECTION -->
 
-  <div  class="about pt-72 w-[100vw] h-auto bg-gradient-to-b from-[#2C0916] to-black">
+  <div  class=" about pt-72 w-[100vw] h-auto bg-gradient-to-b from-[#2C0916] to-black">
 
-              <h1  id="about" class="lg:text-7xl md:text-7xl font-black text-orange-400 text-5xl mb-32 mx-auto flex justify-center items-center content-center">02//about</h1>
+              <h1  id="about" class=" fade-in lg:text-7xl md:text-7xl font-black text-orange-400 text-5xl mb-32 mx-auto flex justify-center items-center content-center">02//about</h1>
 
 
       <!-- ABOUT ME -->
@@ -11,7 +11,7 @@
       <div class="about my-2">
           <div class="flex flex-col p-10 lg:flex-row md:flex-col justify-center items-center">
 
-              <div id="modals" class="photo mx-4 w-[100%] lg:w-[50%] md:w-[80%] mb-5"><img src="/public/img/cartoon.jpg" alt="">
+              <div id="modals" class="  photo mx-4 w-[100%] lg:w-[50%] md:w-[80%] mb-5"><img class="fade-in" src="/public/img/cartoon.jpg" alt="">
 
 
                 <div class="flex flex-row lg:flex-row md:flex-row ">
@@ -22,14 +22,21 @@
           
                                   <!-- Modal -->
                                 <div v-if="selectedModal !== null" class="fixed inset-0 z-10 flex items-center justify-center bg-slate-500 bg-opacity-50">
-                                  <div class="bg-black p-8 rounded-lg w-[90%] h-[90vh] flex flex-col justify-center items-center">
+                                  <div class="bg-black p-8 rounded-lg w-[90%] h-[90vh] flex flex-col justify-center items-center  border-orange-300 border-2 ">
                                      
                                   
                                       <!--iframe -->
                                       <iframe class=" w-[100%] h-[100vh] lg:w-[90%] lg:h-[100vh] md:w-[90%] md:h[100vh] " :src="modals[selectedModal].source" frameborder="0" allowfullscreen></iframe>
 
+
+                                      <!-- download pdf -->
+                                      
+                                      <div class=" lg:hidden md:hidden flex mt-5 justify-center items-center" v-if="modals[selectedModal].link">
+                                          <button><a :href="modals[selectedModal].link" class="font-bold text-xl hover:text-rose-300 text-orange-200">// Download</a></button>
+                                      </div>
+
                                        <!-- Close button -->
-                                      <button @click="closeModal" class="text-xl mt-5 hover:text-rose-300 text-orange-200">//Close</button>
+                                      <button @click="closeModal" class="text-xl font-bold mt-5 hover:text-rose-300 text-orange-200">//Close</button>
                                   </div>
                                 </div>
                   
@@ -43,7 +50,7 @@
 
               </div>
 
-              <div class="mx-4 w-[100%] lg:w-[50%] md:w-[80%] mb-5">
+              <div class=" fade-in mx-4 w-[100%] lg:w-[50%] md:w-[80%] mb-5">
                   <p class="text-xl mb-20 ">My name is Catalina and I am a 25 year old multimedia-design student, focusing on learning skills that will help me become a front-end developer.
                   I grew up in Romania, but I have been calling Denmark home for the past couple of years.
                   I am passionate about coding, design and learning new things. <span v-if="!isParagraphVisible"  class="animate-pulse text-2xl">...</span>
@@ -65,16 +72,16 @@
 
   <!-- HOBBIES -->
   
-  <h1 class="p-10 my-32 lg:text-7xl md:text-7xl text-5xl font-bold text-rose-300 text-center">//hobbies</h1>
+  <h1 class="fade-in p-10 my-32 lg:text-7xl md:text-7xl text-5xl font-bold text-rose-300 text-center">//hobbies</h1>
 
-  <p class=" mx-4 p-10 text-xl font-medium">While my professional focus is on development, in my free time I have simple yet relatable hobbies that help keeping me busy and entertained.</p>
+  <p class="fade-in mx-4 p-10 text-xl font-medium">While my professional focus is on development, in my free time I have simple yet relatable hobbies that help keeping me busy and entertained.</p>
 
 
   <!--  carousel -->
 
 
 
-      <div class="flex justify-center items-center h-96 md:h-[70vh] lg:h-screen">
+      <div class="fade-in flex justify-center items-center h-96 md:h-[70vh] lg:h-screen">
           <div class="mt-3 w-[80vw] lg:h-[80vh] md:h-[50vh] h-[30vh] relative overflow-hidden">
             <div class="flex" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
               <div v-for="(image, index) in images" :key="index" class="flex-shrink-0 w-full relative">
@@ -120,13 +127,20 @@ const toggleParagraphVisibility = () => {
 const selectedModal = ref(null);
 
 const openModal = (index) => {
+  document.body.classList.add('modal-open');
   selectedModal.value = index;
 };
 
 const closeModal = () => {
+  document.body.classList.remove('modal-open');
   selectedModal.value = null;
 };
   
+// download pdf
+
+
+
+
 
 
 

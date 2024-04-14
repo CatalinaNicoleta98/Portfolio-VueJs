@@ -54,7 +54,7 @@
      
  </nav>
  
-
+ 
  <div class="center flex flex-col justify-center items-center  ">
 
      <!-- THIS IS NAME-->
@@ -97,6 +97,7 @@
     background-image: url('../img/lo-fi.png');
     background-size: cover;
     background-position: center;
+    
     
   
   };

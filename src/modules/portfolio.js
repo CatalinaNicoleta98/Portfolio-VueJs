@@ -12,7 +12,7 @@ export const cards = ref([
             category: '| Development',
             tools: 'HTML-CSS-BOOTSTRAP-JavaScript',
             description: 'For my first semester exam, I got to work on my biggest project until now. It was a team project, which means that each one of us had it\'s own area of expertise. I, fortunately, got to do a little bit of everything by helping with the design of the logo, printables and report and  working together with my colleague on the UX research. But the main area I worked in was definitely the coding of the website. Below, I invite you to experience the website.',
-            source: 'https://danielpincu.com/index.html',
+            source: '../img/trapholtweb.mp4',
             link: 'https://danielpincu.com/index.html',
             repository:'https://github.com/DanielPincu/SemesterProject'
             
@@ -27,7 +27,7 @@ export const cards = ref([
         modal:{
             category: '| UI/UX',
             tools: 'Adobe XD',
-            description: 'In the first semester, our UX mandatory assignment was creating a mobile app for students looking for remote jobs.There was no coding involved, the project was mostly about UX research and te final product itself was a app mockup.',
+            description: 'In the first semester, our UX mandatory assignment was creating a mobile app for students looking for remote jobs.There was no coding involved, the project was mostly about UX research and the final product itself was an app mockup.',
             source: '../img/remotelyweb.mp4'
         },
     },
@@ -57,13 +57,13 @@ export const cards = ref([
         modal:{
             category: '| Content Creation',
             tools: 'Adobe PremierePro - Adobe AfterEfects',
-            description: 'This semester, the first video production assignment we got was imagining, scripting, filming and editing an add for whatever product real or fictional we want. Almost at the same time, we got another assignment to create an Instagram ad and make the presentation about a company and the strategy they use to gain customers. For both of them, we chose Starbucks. Below you can see the final video and the card picture is the exact ad we created for Instagram..',
+            description: 'This semester, the first video production assignment we got was imagining, scripting, filming and editing an ad for whatever product real or fictional we decided on. Almost at the same time, we got another assignment to create an Instagram ad and make the presentation about a company and the strategy they use to gain customers. For both of them, we chose Starbucks. Below you can see the final video and the card picture is the exact ad we created for Instagram..',
             source: 'https://www.youtube.com/embed/vPnsn_jS6e8?si=Dghjiwr8DXqXF7CO'
         },
     },
 
     {
-        id: 'creation',
+        id: 'development',
         image: '../img/chatognito.png',
         title: 'Chatognito',
         category: 'Content Creation',
@@ -72,7 +72,7 @@ export const cards = ref([
             category: '| Content Creation',
             tools: 'Adobe Illustrator',
             description: 'Chatognito was a private project, together with my colleague. A try on creating a logo for a fictional app but also on learning a little bit more coding. I wanted to create a logo that would be simple, yet memorable and that would represent the website\'s purpose. I used Adobe Illustrator to create it. Bellow you can interact with the website',
-            source: 'https://www.chatognito.com/',
+            source: '../img/chatognito.mp4',
             link: 'https://www.chatognito.com/'
         },
     },
@@ -107,7 +107,11 @@ export const cards = ref([
           
             
         },
+
+        
     },
+
+    
 
 
    

@@ -3,9 +3,9 @@
      
       <div id="portfolio" class="portfolio my-72 py-4  w-[100vw] h-auto">
          <!-- PORTFOLIO PROJECTS STARTS -->
-        <h1  class="lg:text-7xl md:text-7xl text-5xl mb-32 mx-auto flex justify-center font-black text-orange-400 items-center content-center">04//portfolio</h1>
+        <h1  class="fade-in lg:text-7xl md:text-7xl text-5xl mb-32 mx-auto flex justify-center font-black text-orange-400 items-center content-center">04//portfolio</h1>
   
-        <ul class=" flex lg:flex-row md:flex-row flex-wrap text-md mt-7 mx-4 lg:p-10 md:p-10 mb-5">
+        <ul class="move-in flex lg:flex-row md:flex-row flex-wrap text-md mt-7 mx-4 lg:p-10 md:p-10 mb-5">
               <li class="lg:ml-7 mr-6 mt-2 text-orange-300">Filter by</li>
               <li class="mr-6 mt-2"><a @click.prevent="filterItems('all')" data-category="all" class="text-orange-300          hover:text-rose-300" href="#">//All</a></li>
               <li class="mr-6 mt-2"><a @click.prevent="filterItems('development')" data-category="development" class="text-orange-300          hover:text-rose-300" href="#">01//Development</a></li>
@@ -14,7 +14,7 @@
         </ul>
   
   
-        <div id="mywork" class="portfolio m-4 px-10 flex flex-col justify-center items-center lg:flex-row lg:flex-wrap md:flex-row md:flex-wrap">
+        <div id="mywork" class=" portfolio m-4 px-10 flex flex-col justify-center items-center lg:flex-row lg:flex-wrap md:flex-row md:flex-wrap">
 
           <!-- cards -->
           <div v-for="card in filteredCards" :key="card.title" :id="card.id" class="moving-border  w-96 h-auto  mt-4  bg-gray-900 sm:mb-2  p-2 m-5 rounded-lg shadow flex justify-start items-start flex-col">
@@ -27,7 +27,7 @@
               <button @click="openModal(card)" class=" hover:scale-110 mt-5  hover:text-rose-300 text-orange-200 text-xl ">{{ card.button }}</button>
             </div>
             <!-- modal here -->
-              <div id="card" v-if="card.modalVisible" class="fixed inset-0 z-50 overflow-y-auto">
+              <div  v-if="card.modalVisible" class="fixed inset-0 z-50 overflow-y-auto">
                 <div class="flex items-center justify-center bg-slate-500 bg-opacity-50 h-auto">
                   <div class="bg-black m-1 p-10 rounded-lg shadow-lg w-[95%] h-auto  border-orange-300 border-2">
                     <div class="flex flex-col justify-center py-5">
@@ -87,10 +87,14 @@ const filterItems = (category) => {
 
 // modal function
 const openModal = (card) => {
+  // used to prevent body scrolling when modal is open
+  document.body.classList.add('modal-open');
   card.modalVisible = true;
 };
 
 const closeModal = (card) => {
+  // used to prevent body scrolling when modal is open
+  document.body.classList.remove('modal-open');
   card.modalVisible = false;
 };
 </script>
