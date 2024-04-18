@@ -25,18 +25,18 @@ body{
 }
 
 .fade-in {
-  opacity: 0; /* Initially hide the element */
-  animation: fade-in 0.5s ease-in forwards; /* Apply the fade-in animation */
+  opacity: 0; 
+  animation: fade-in 0.5s ease-in forwards; 
   animation-timeline: view();
   animation-range: 0 50vh;
 }
 
 @keyframes fade-in {
-  0% { scale: .5; opacity: 0; } /* Start with opacity 0 */
+  0% { scale: .5; opacity: 0; } 
 
-  50% { scale: .8; opacity: .5; } /* Start with opacity 0 */
+  50% { scale: .8; opacity: .5; } 
   
-  100% {scale:1; opacity: 1; } /* End with opacity 1 */ 
+  100% {scale:1; opacity: 1; } 
 }
 
 .move-in {
@@ -48,10 +48,10 @@ body{
 
 @keyframes move-in {
   0% {
-    scale:0; transform: translateX(-100%); /* Start position: top-left corner */
+    scale:0; transform: translateX(-100%); 
   }
   100% {
-    scale:1;transform: translateX( 0); /* End position: initial position */
+    scale:1;transform: translateX( 0); 
   }
 }
 
